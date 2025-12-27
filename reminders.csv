@@ -1,0 +1,3 @@
+email,subject,message,send_date,send_time,status
+test@email.com,meeting Reminder, Don't forget the meeting, 2025-01-10, 9:00,pending
+donotreply@email.com,update message, This is an automated message do not reply, 2025-01-10, 9:00,complete
