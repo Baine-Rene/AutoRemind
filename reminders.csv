@@ -1,3 +1,3 @@
 email,subject,message,send_date,send_time,status
-a@test.com,Test OK,Hello,2025-01-10,09:00,pending
-b@test.com,Bad Date,Oops,2025/01/10,09:00,pending
+a@test.com,Test OK,Hello,2025-01-12,09:00,pending
+b@test.com,Bad Date,Oops,2025-12-28,09:00,pending
