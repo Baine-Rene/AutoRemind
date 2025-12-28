@@ -11,14 +11,14 @@ def check_mail():
     reminders = load_reminders(reminders.csv)
     now = datetime.now.strftime("%Y-%m-%d %H:%M")
 
-    for r in reminders:
-        if r["send_time"] == now:
+    for reminder in reminders:
+        if reminder["send_time"] == now:
             send_email(
-                to=r["email"],
-                subject=r["subject"],
-                body=r["message"]
+                to=reminder["email"],
+                subject=reminder["subject"],
+                body=reminder["message"]
             )
-
+    print(f"Sent reminder to {reminder['email']}")
 # Make a check every minute and execute the function check_mail
 
 schedule.every(1).minutes.do(check_mail)
