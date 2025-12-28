@@ -6,7 +6,7 @@ def send_mail(to_email, subject, message_body):
     receiver = to_email
 
     message = f"""\
-Subject: Hello Rene
+Subject: {subject}
 To: {receiver}
 From: {sender}
 
