@@ -1,8 +1,9 @@
 import schedule
 import time
 from datetime import datetime
-from mailer import send_email
-from reminders import load_reminders
+from send_mail import send_email
+from reminder_manager import load_reminders
+
 
 # function to check the current date and time and send email when scheduled time matches
 
