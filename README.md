@@ -2,9 +2,29 @@
 
 ## Description
 
-A Python program that reads reminders from a file, schedules emails, and reliably sends them.
+A Python Based email reminder system that:
 
-## Testing 
+- Reads scheduled reminders from a CSV file 
+- Continuosly checks the current date and time
+- Sends emails automatically when the scheduled time matches real time.
+- Uses Mail traps sandbox to safely test emails. being sent. 
+- RUns as a long-lived bacground process
 
-Pythons script runs and send and sends an email to te mailtrap sandbox. (send_mail.py)
+This project mimics real-world schedulers, workers and cron-job functions. 
+
+## End-to-end workflow:
+
+```scss
+reminders.csv
+      ↓
+reminder_manager.py (parse + prepare data)
+      ↓
+scheduler.py (time-based checks)
+      ↓
+send_mail.py (SMTP email sending)
+      ↓
+Mailtrap inbox
+
+```
+
 

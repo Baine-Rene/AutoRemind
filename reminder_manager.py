@@ -47,5 +47,26 @@ def load_reminders(csv_path):
         print(f"Error reading CSV: {e}")
     return reminders
 
+
+def save_reminders(csv_path, reminders):
+    fieldnames = [
+        "email",
+        "subject",
+        "message",
+        "send_date",
+        "send_time",
+        "status"
+    ]
+
+    with open(csv_path, mode="w", newline="", encoding="utf-8") as file:
+        writer = csv.DictWriter(file, fieldnames=fieldnames)
+        writer.writeheader()
+
+        for reminder in reminders:
+            reminder_copy = reminder.copy()
+            reminder_copy.pop("send_at", None)
+            writer.writerow(reminder_copy)
+
+
 reminders = load_reminders("reminders.csv")
 print(reminders)
