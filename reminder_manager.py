@@ -41,7 +41,6 @@ def load_reminders(csv_path):
                         print(f"Invalid date/time format: {row} ({e})")
 
 # Error handling 
-
     except FileNotFoundError:
         print(f"Error: The file '{csv_path}' was not found.")
     except Exception as e:
