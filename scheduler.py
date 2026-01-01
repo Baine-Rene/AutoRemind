@@ -24,7 +24,7 @@ def check_mail():
             reminder["status"] = "sent"
             updated = True
             print(f"Sent reminder to {reminder['email']}")
-            print("Have a good day!")
+            print("Have a good day! :)")
 
     if updated:
         save_reminders("reminders.csv", reminders)

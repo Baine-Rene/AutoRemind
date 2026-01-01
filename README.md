@@ -39,10 +39,12 @@ Mailtrap inbox
 - Mailtrap (or SMTP provider)
 
 ### Packages
-- pip install schedule
+```
+pip install schedule
+```
 
 ## Run
-```bash
+```
 python scheduler.py
 ```
 
