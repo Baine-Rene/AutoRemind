@@ -27,4 +27,28 @@ Mailtrap inbox
 
 ```
 
+## File Responsibility
 
+- `reminders.csv` stores simple plain text data in a table like format. Stores infomation regarding the status of the email, send date and send time. 
+- `reminder_manager.py`, reads the csv files parses date and time to the `datetime` object then returns reminders. 
+- `send_mail.py`, send an email via Simple mail transfer protocol (Mailtrap), which is then delivered to your mailtrap inbox. 
+- `scheduler.py`, this script runs continuosly, checks current time then determines whether an email in the `reminders.csv` should be sent (calls `send_mail()` at the right moment).
+
+## Requirements
+- Python 3.10+
+- Mailtrap (or SMTP provider)
+
+### Packages
+- pip install schedule
+
+## Run
+```bash
+python scheduler.py
+```
+
+## Possible improvements
+
+- Replace CSV with SQLite
+- Add CLI interface
+- Dockerize the application
+- Deploy as a background service
